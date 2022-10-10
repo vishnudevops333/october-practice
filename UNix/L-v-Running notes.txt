@@ -1,0 +1,404 @@
+Internal commands:
+External commands:
+
+Command: A command is a executable program.
+What is program: a program is a set operations kept in chronologicla order to achive specific activity..
+
+
+unix-- ev
+
+commands:
+
+whoami/logname/who am i
+w/who
+who -b
+who -T/a
+command_name --help
+man command_name
+uname
+uname -a
+cat /etc/redhat-release
+last--- we can get historical users information
+clear ctrl_l-- to clear the screen...
+exit.
+
+/etc/fstab
+df -h
+du -h
+lsblk
+
+
+[root@localhost /]# free -h
+              total        used        free      shared  buff/cache   available
+Mem:           1.8G        198M        1.1G        8.5M        492M        1.4G
+Swap:          2.0G          0B        2.0G
+[root@localhost /]# cat /proc/meminfo
+
+lscpu
+/proc/cpuinfo
+
+[root@localhost /]# uptime
+ 09:38:33 up  1:03,  2 users,  load average: 0.00, 0.01, 0.05
+[root@localhost /]#
+
+top
+top -n <number>
+top -n 1 -c 
+
+
+history and fc -l
+
+id ----
+/etc
+  passwd   physical users information exists on server..
+  shadow   
+  cron.allow
+  cron.deny
+  yum.respos.d
+  redhot-release
+  fstab
+  shells
+  profile
+  hosts
+----
+/var/log
+    messages
+    secure
+
+rpm
+yum
+
+env
+set
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
+which command_name
+locate  command_name/file_name
+
+file operation commands:
+
+touch file_name1 file_name2 file_name3 .... file_namen
+
+M --- modified
+A  -- access 
+C --- created
+
+stat 
+
+cat
+display the con
+> symbol we can create a new file and plce data
+>> apped teh data if file is already avalaibl
+
+ctrl+c
+ctrl+d
+Ctrl+q
+ctrl+z
+CTRL+L
+
+mkdir 
+-p
+-m
+
+rm
+-r  -- to remove directory
+-f  -- forcibilly
+-i   interactive
+
+ls
+
+
+
+
+            file      directory 
+read    file content   		list contenet 
+write   edit the file  		edit the directory ( Create new files, or directores)
+execute make use of program  Traverse...
+
+cd ASIA/INDIA/KARNATAKA/BANGALORE/SILKBAORD/
+cd ../../../..
+cd -
+cd
+cd ~
+pwd
+
+cp
+mv
+rm
+
+grep --- globally search for regular expressions and print it..
+grep options string_name file_name
+it allows to search a string from one more files at a time.
+grep options string_name file_name
+-i ignore case
+-n to  get line numbers
+-l to display file_names
+-r recursive
+-v verbose
+-w search exact word, dont display if it associates with other word.
+-o only word
+-c count the number the occurences of string
+-s it supress error message
+-number -- to diplay the specified files before and after of matched lines
+-A number  -- to display  After 
+-B number   -- to display before
+-E --- extenened grep--- 
+grep -E "unix|2|1" TEST.txt
+egrep  "unix|2|1" TEST.txt
+
+grep ram TEST.txt
+grep unix TEST.txt
+grep unix TEST.txt
+grep unix TEST.txt
+grep -i unix TEST.txt
+grep -in unix TEST.txt
+grep -il unix
+grep -il unix *
+grep -il unix *
+grep -il unix /
+grep -il unix /*
+grep -il unix /
+grep -ilr unix /
+grep -ilr unix /*
+grep -in unix TEST.txt
+grep -iv unix TEST.txt
+grep -in unix TEST.txt
+grep -i unix TEST.txt
+grep -iw unix TEST.txt
+grep -iwo unix TEST.txt
+grep -ic unix TEST.txt
+grep -is unix TEST.txt
+grep -ils unix *
+grep -il unix *
+grep -ils unix *
+grep -i unix TEST.txt
+grep -i unix TEST.txt
+grep -i2 unix TEST.txt
+grep -i -A 2 unix TEST.txt
+grep -i -B 2 unix TEST.txt
+grep -i -B 2 -A 2 unix TEST.txt
+grep -i2 unix TEST.txt
+grep --help
+grep -E "unix|2|1" TEST.txt
+egrep  "unix|2|1" TEST.txt
+
+cp ---- comand... it takes teh backup at the time of comamnd executions.
+links:
+hard 
+soft
+
+wc
+cut
+-c  to etxract 
+-f to extract filed
+-d delimeter
+-b bytes
+
+
+
+
+cut 1,3 cut_test.txt
+cut -c 1 cut_test.txt
+cut -c $ cut_test.txt
+cut -c '$' cut_test.txt
+cut -c "$" cut_test.txt
+cut -c 3 cut_test.txt
+cat cut_test.txt
+cut -c 4 cut_test.txt
+cut -c 1,3,4 cut_test.txt
+cut -c 1-3,4-8 cut_test.txt
+cut -c 1-3,6-8 cut_test.txt
+cut -b 1-3,6-8 cut_test.txt
+cut --help
+cut --output-delimiter=A -b 1-3,6-8 cut_tes
+cut --output-delimiter=Z -b 1-3,6-8 cut_tes
+ls -lrt
+cat cut_test.txt
+cut -f 1 cut_test.txt
+cut -d " " -f 1 cut_test.txt
+cut -d " " -f 1,$ cut_test.txt
+cut -d " " -f 1,4 cut_test.txt
+cut -d " " -f 1,2 cut_test.txt
+cut -d " " -f 1-2 cut_test.txt
+cat cut_test.txt
+cat -v cut_test.txt
+cat --help
+cat -E cut_test.txt
+cat -T cut_test.txt
+cat -b cut_test.txt
+#HI,HI
+#HI-HI
+#HI$HI
+ls -lrt
+cut -f 1 -d " " cut_test.txt
+sed -i 's/ /,/g' cut_test.txt
+cat cut_test.txt
+cut -f 1 -d " " cut_test.txt
+cut -f 1 -d "," cut_test.txt
+sed -i 's/,/-/g' cut_test.txt
+cat cut_test.txt
+cut -f 1 -d "-" cut_test.txt
+cut -f 4 -d "-" cut_test.txt
+cut -f 4- -d "-" cut_test.txt
+cut -f 1-$ -d "-" cut_test.txt
+cut -f 1- -d "-" cut_test.txt
+cat -c 5- cut_test.txt
+cut -c 5- cut_test.txt
+rev cut_test.txt
+ls -lrt
+vi sort_test.txt
+sort sort_test.txt
+vi sort_test1.txt
+sort sort_test1.txt
+sort -r sort_test1.txt
+vi sort_test1.txt
+sort sort_test1.txt
+sort -r sort_test1.txt
+ls -lrt
+cat sort_test.txt
+sort -n sort_test.txt
+sort -nr sort_test.txt
+sort -k 3 -nr sort_test.txt
+sort -k 3 -n sort_test.txt
+sort -k 3 -nr sort_test.txt
+sort -t " " -k 3 -nr sort_test.txt
+sed -i 's/ /,/g' sort_test.txt
+cat sort_test.txt
+sort -t "," -k 3 -nr sort_test.txt
+sed -i 's/,/ /g' sort_test.txt
+cat sort_test.txt
+ls -lrt
+vi sort_test1.txt
+sort sort_test1.txt
+sort -u sort_test1.txt
+sort -u -o SORT_TEST.tx sort_test1.txt
+ls -lrt
+cat SORT_TEST.tx
+sort -u sort_test1.txt
+sort -u sort_test1.txt >SORT_1.txt
+sort -u -o SORT_2.txt sort_test1.txt
+ls -lrt
+sort -u -o SORT_2.txt sort_test1.txt
+ sort -f -u sort_test1.txt
+
+
+tail -f SORT_2.txt
+tail -f +5 SORT_2.txt
+tail --help
+tail -f -5 SORT_2.txt
+tailf 5 SORT_2.txt
+tail -5f SORT_2.txt
+ls -lrt
+wc -l  TCS.txt
+head -500 TCS.txt|tail -1
+head -520 TCS.txt|tail -1
+head -520 TCS.txt|tail -20
+
+special characters
+
+*--> mean one more occurances
+?--- to matach any single character
+[-]
+|
+^---- begining character
+$ ----end character
+;
+!
+<
+>
+>>
+<<  --here docuement
+{..}
+
+Signals
+0   Standrad Input
+1   Standard o/p
+2   Standard Errors
+9
+15
+
+
+more
+less
+pg
+tar
+gzip
+zip
+compress
+pack
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+26/09/2022
+-------------------
+Mudiam Nagachandra6:29 PM
+Yes it's clear Babai
+Vijay Kumar6:48 PM
+957  umask
+  958  ls -lrt
+  959  PSI='ABC'
+  960  id
+  961  umask=0000
+  962  umask
+  963  umask 000
+  964  umash
+  965  umask
+  966  mkdir UMASK_000
+  967  mkdir UMASK_TOUCH
+  968  touch UMASK_TOUCH1
+  969  ls -lrt
+  970  umask 777
+  971  mkdir umask_777
+  972  touch umask_file_777
+  973  ls -lrt
+  974  chmod 765  umask_file_777
+  975  ls -lrt
+  976  mkdir 765 umask_777
+  977  chmod 765 umask_777
+  978  ls -lrt
+  979  chod 755 error.txt
+  980  chmod 755 error.txt
+  981  ls -lrt
+  982  chmod ug
+ejq-gxfk-eaj
+
+===============================================
+Vijay Kumar6:42 PM
+echo "my ID is 73535" | tr -cd [:print:]
+echo "my ID is 73535" | tr -d [:print:]
+echo "my ID is 73535" | tr -cd [:print:]
+vi a.txt
+cat a.txt
+tr ' ' '\n' <a.txt
+tr '\n' ' ' <a.txt
+tr ' ' '\n' <a.txt|sort|uniq -c
+tr ' ' '\n' <a.txt|sort|uniq -c|sort -k 1 -nr
+history
+iuo-mrbq-ppz
+
+
+
+
+
+
+
+
+
+
+
